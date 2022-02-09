@@ -8,7 +8,7 @@
 
 # Competition Day:
 
-### Anomolies
+### Anomalies
 *Describe all the anomlies we were able to find along with anomoly rank among other teams*
 
 ### Lost Flags
