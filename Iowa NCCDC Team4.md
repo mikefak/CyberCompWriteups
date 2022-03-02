@@ -54,12 +54,10 @@ All of us added our flags into their required directories and did not tamper wit
 *Refer to Anomalies folder for individual writeups*
 
 ### What worked, What didn't 
-*Explain things we should and should not do next year*
 
 ##### The Good:
 
-Firewall rules not bringing us down throughout the competition was quite the surprise. This is often an aspect of ccdc, from my experience, that brings team's down a decent chunk of points. It does help that we were able to set these up in the set-up phase rather than in an active competition. Out service time being the highest among the other teams was a great aspect we saw at the end of the competition. 
-
+Firewall rules not bringing us down throughout the competition was quite the surprise. From my experience, this is often one of the bigger contributors to a team's loss of points. It does help that we were able to set these up in the set-up phase rather than in an active competition. Out service time being the highest among the other teams was a great aspect we saw at the end of the competition. 
 
 Communication among the team was also great. We were able to divide up anomalies based on whoever's services were functining correctly. This also applied to our flag appeal times as well, since we were able to submit all of them on time with proper responses.
 
