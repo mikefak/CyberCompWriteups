@@ -20,7 +20,7 @@ All blue-team's were given an indetical set of hosts/servers several days prior 
 The generators and substations ran an embedded version of linux primarily orientated toward basic management which the option of running a maintence mode that opened an ssh instance that could be connected to. Because of this, our team added an aditional 3 hosts on the network for the purpose of managing the three generators and substations.
 
 Final topology:   
-![[Pasted image 20220214175233.png]]
+![Pasted image 20220214175233](https://user-images.githubusercontent.com/75512760/156289367-135f2044-84f3-4cf5-83e0-6bc645d8cb5e.png)
 
 
 We were incredibly restricted with how we could secure all of the linux servers this year. Apt-get was disabled, meaning it was virtually impossible to update any insecure packages. We also had plans prior to the competition to implement a centralized IDS firewall and logging server that was crushed with these restrictions. 
