@@ -50,7 +50,27 @@ One of the greates things that brought us down was
 *Refer to Anomalies folder for individual writeups*
 
 ### What worked, What didn't 
-*Explain things we should and should not do next year*
+
+##### The Good:
+
+Firewall rules not bringing us down throughout the competition was quite the surprise. This is often an aspect of ccdc, from my experience, that brings team's down a decent chunk of points. It does help that we were able to set these up in the set-up phase rather than in an active competition. Out service time being the highest among the other teams was a great aspect we saw at the end of the competition. 
+
+
+Communication among the team was also great. We were able to divide up anomalies based on whoever's services were functining correctly. This also applied to our flag appeal times as well, since we were able to submit all of them on time with proper responses.
+
+Anomaly submissions were also great. Since some of our members had prior Capture-the-flag experience, decrypting the files that Iowa gave us this year was not too big of a hastle. The flexseal anomaly was particularly interesting, more information on that in the Writeups folder...
+
+Finally, we were able to keep our flags secured on half of the machines (Generator, Substation, Billing). Since these flags were worth a lot of points and were given to us at the start of the competition, keeping them safe was vital to securing our third place position. 
+
+##### The Bad
+
+Establishing some sort of centralized form of logging this year was incredibly difficult given our limits with "apt-get". This meant that getting organized log updates for regularly scheduld "Intrusion Reports" was disorganized and difficult. If our team was able to find some sort of neat cat string output prior to the Competition, that would have helped us the receive a lot more points on these reports. Around 10 or so log entires were being added to these files every 5 mintues. Because of this, finding what we wanted wasn't particularly easy. 
+
+Our usability score also was not the best during the competition. This was a score given to teams throughout the competition in regard to the usability of the actual website, which graded basic operations. Since it was our first time competiting, these came unannounced and unexpectedly. It also didn't help that that, after the first report score came out, the second was already locked in for grading. There was, quite literally, zero minutes we had available to troubleshoot this. Having a spare host on the topology that mimicked an end user would have helped us in seeing what the current usability was like, rather than having to wait for these reports to be submitted.
+
+Though we did get a competitive anomaly score, It could have been a lot better. A decent bulk of the anomalies involved outputting netcat prompts into a script to solve automatically. Though most of the people with programming knowledge knew the logic of these operations, the process of receiving/sending information through netcat was not easy. Practice with these technologies, along with learning to write adaptable scripts, will prove to be useful in the future. 
+
+Finally, out process of securing our system from planted flags were flawed. There were alternative measure that we could have used to supress red-teams ability to plant flags.
 
 ### Conclusion
 
