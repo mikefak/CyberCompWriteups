@@ -79,7 +79,7 @@ Finally, our process of securing our system from planted flags were flawed. Ther
 
 George and Yusuf (Generators), Petar (Substation), Aggie (Billing),  Mateusz (Controller Server),  Michael (Captain, Controller Server)
 
-Writeup by Michael, Anomaly entries by George and Yusuf
+Writeup by Michael and George, Anomaly entries by Michael, George, and Yusuf
 
 
 
