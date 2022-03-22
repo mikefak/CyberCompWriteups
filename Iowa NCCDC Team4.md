@@ -62,7 +62,7 @@ Anomaly submissions were also great. Since some of our members had prior Capture
 
 Finally, we were able to keep our flags secured on half of the machines (Generator, Substation, Billing). Since these flags were worth a lot of points and were given to us at the start of the competition, keeping them safe was vital to securing our third place position. 
 
-##### The Bad
+##### The Bad:
 
 Establishing some sort of centralized form of logging this year was incredibly difficult given our limits with "apt-get". This meant that getting organized log updates for regularly scheduld "Intrusion Reports" was disorganized and difficult. If our team was able to find some sort of neat cat string output prior to the Competition, that would have helped us the receive a lot more points on these reports. Around 10 or so log entires were being added to these files every 5 mintues. Because of this, finding what we wanted wasn't particularly easy. 
 
@@ -70,7 +70,7 @@ Our usability score also was not the best during the competition. This was a sco
 
 Though we did get a competitive anomaly score, It could have been a lot better. A decent bulk of the anomalies involved outputting netcat prompts into a script to solve automatically. Though most of the people with programming knowledge knew the logic of these operations, the process of receiving/sending information through netcat was not easy. Practice with these technologies, along with learning to write adaptable scripts, will prove to be useful in the future. 
 
-Finally, out process of securing our system from planted flags were flawed. There were alternative measure that we could have used to supress red-teams ability to plant flags.
+Finally, our process of securing our system from planted flags were flawed. There were alternative measure that we could have used to supress the red-teams ability to plant flags that we were unable to execute in the given amount of pre-competition time which ended up hurting us later during the competition.
 
 ### Conclusion
 
@@ -79,7 +79,7 @@ Finally, out process of securing our system from planted flags were flawed. Ther
 
 George and Yusuf (Generators), Petar (Substation), Aggie (Billing),  Mateusz (Controller Server),  Michael (Captain, Controller Server)
 
-Writeup by Michael, Anomaly entries by George
+Writeup by Michael, Anomaly entries by George and Yusuf
 
 
 
