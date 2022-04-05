@@ -1,4 +1,4 @@
-# Iowa NCCDC Team 4 (aka Team Hacker Club) Writeup - Template
+# Iowa NCCDC Team 4 (aka Team Hacker Club) Writeup
 
 * Hello, Cyber Security and Grid Engineers!
 We would like to extend our most sincere thanks to you for assisting us with our power
@@ -8,11 +8,7 @@ down and stable to provide power to all of our customers at a reliable, sustaina
 
 The blurb above describes the layout of the scenario given to the 2022 Iowa NCCDC Blue-Team's. Teams of 8 (in our case, 6) are invited to compete by Iowa State University to defend a mock-corporate network against an active red team. Teams are scored based on service uptime, network usabilitity, anomalies (capture-the-flag style quetions), intrustion reports, and network documentation. Further, untouched flags pre-planted by blue team also contributed to the score total. It was all of our first time's competing in Iowa State's NCCDC.
 
-*Brief desc of competition*
-
-
 # Setup phase:
-*Describe how we prepared for the comp given the environment*
 
 All blue-team's were given an indetical set of hosts/servers several days prior to the competition. We able to add any servers to the topology that could help us in securing/accessing our network in any way, but we could not remove any servers. The team's this year were given the following servers/hosts and services to protect for this year: Controller GUI/Frontend (SSH, HTTP), Controller Server (SSH, PDCP), Substation (PDCP), three Generators (Power System Health), Billing Server (RDP). All operating systems ran linux except for the billing rdp server.
 * maybe talk about how servers interconnect here*
@@ -38,13 +34,23 @@ All of us added our flags into their required directories and did not tamper wit
 The competition was held on 2/5, where the red-team phase and start of competition started at 8 am and went until 4 pm. This gave us 8 hours to juggle with red team, flags, anomalies, services, etc. We all met up prior to the competition time and got ready for some red team action!
 
 ### Services
-Despite our teams inexperience, along with being down two players from the maximum team cap, we actually got the highest service uptime in comparison to all teams at 95.7% availability. We did not often see a whole lot of services going down throughout the 8 hours. Our firewalls, surprisingly, did not bring us down at all throughout the competition. 
+Despite our teams inexperience, along with being down two players from the maximum team cap, we actually got the highest service uptime in comparison to all teams at 95.7% availability. We did not often see a whole lot of services going down throughout the 8 hours. Our firewalls, surprisingly, did not bring us down at all throughout the competition as well. Aside from services being universally down among all teams for several checks, we missed some ssh checks due to the misconfiguration of users on the controller server. This was addressed quickly and our ssh was green for the remainder of the competition.
 
-One of the greates things that brought us down was 
 
 ### Lost Flags
-*Describe how we lost what flags and which ones were planted*
-*
+
+On the controller server, we were able to witness some activity that indicated toward red teams steps toward capturing our flags.
+
+![unknown](https://user-images.githubusercontent.com/75512760/161786000-b1a55eff-48f3-4311-8136-270f111356e7.png)
+
+Early in the competition around 9:30, many instances of failed login attempts were captured in the ssh log file. We can see that the group permissions established seemed to have worked in our setup phase given these failed login attempts. Looking closley at the log file, we can see that the .168 IP has an unauthorized login attempt for the admin baggins.mickel.
+
+In the debrief after the competition, red team mentioned that the one of the essential controller server services (PDCP) had a backdoor to an administrator account within the service. Our best guess is that they took advantage of this early on in the competition and captured one of the flags from there. 
+
+![UnAuthorizedLogin](https://user-images.githubusercontent.com/75512760/161785706-e8046cf2-3df7-4ed2-8824-1e5f32f1a5d4.png)
+
+A little after 1:30, we found that an unauthorized user, chris, was attemepting to authenticate as sudo. After seeing these logs, we quickly removed chris from the /etc/passwd file, but was unable to view any indiciation of activity he might have done. Shortly after this event, the second flag was lost on the controller server. We were able to retrieve partial credit back from our lost flags after giving the red-team our reasoning for how they were captured in the first place utalizing log information and login history tools built into Linux.
+
 ### Anomalies
 
 *Refer to Anomalies folder for individual writeups*
@@ -54,7 +60,6 @@ One of the greates things that brought us down was
 ##### The Good:
 
 Firewall rules not bringing us down throughout the competition was quite the surprise. This is often an aspect of ccdc, from my experience, that brings team's down a decent chunk of points. It does help that we were able to set these up in the set-up phase rather than in an active competition. Out service time being the highest among the other teams was a great aspect we saw at the end of the competition. 
-
 
 Communication among the team was also great. We were able to divide up anomalies based on whoever's services were functining correctly. This also applied to our flag appeal times as well, since we were able to submit all of them on time with proper responses.
 
@@ -74,6 +79,7 @@ Finally, our process of securing our system from planted flags were flawed. Ther
 
 ### Conclusion
 
+Thank you to Iowa NCCDC for a great competition! It was exciting seeing us get 3rd place despite it being a first time of all of us on the team and we learned a lot about the structure of a CCDC competition. We are looking forward to next year!
 
 *Special Thanks to the team:
 
